@@ -1,4 +1,4 @@
-const Intern = require("../assets/lib/manager")
+const Manager = require("../assets/lib/manager")
 
 describe("Manager", () => {
 
