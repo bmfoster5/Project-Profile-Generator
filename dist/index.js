@@ -2,6 +2,8 @@ const inquirer = require("inquirer")
 const Engineer = require("../assets/lib/engineer");
 const Intern = require("../assets/lib/intern");
 const Manager = require("../assets/lib/manager");
+const generateHTML = require("./generateHTML");
+const fs = require("fs");
 
 const teamArray = [];
 
@@ -85,7 +87,8 @@ function createIntern() {
         answers.internSchool
       );
       teamArray.push(Intern);
-
+      console.log(teamArray);
+      displayMenu();
     })
 };
 
@@ -127,7 +130,7 @@ function createEngineer() {
         answers.engineerGithub
       );
       teamArray.push(engineer);
-
+      displayMenu();
     })
 };
 
@@ -136,7 +139,7 @@ function displayMenu() {
     .prompt([
       {
         type: 'list',
-        choices: ['add an engineer', 'add an intern'],
+        choices: ['add an engineer', 'add an intern', 'Finish'],
         name: 'action',
         message: 'Please choose an option:'
       }
@@ -148,6 +151,11 @@ function displayMenu() {
       } else if (
         answers.action === 'add an intern'
       ) { createIntern() }
+      else {
+        console.log("Team created");
+
+        fs.writeFileSync('team.HTML', generateHTML(teamArray))
+      }
     })
 }
 
