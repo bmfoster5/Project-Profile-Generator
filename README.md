@@ -10,7 +10,7 @@ In this challenge, I want to create a Node.js command-line application that take
 
 ## Usage
 
-![alt text](assets/images/Horiseon.gif)
+![alt text](assets/media/ppg.gif)
 
 ## How to Contribute
 
