@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const generateHTML = (teamArray) => {
 let cards = [];
-
+console.log(teamArray);
 
 function managerCard (employee) {
   return `
@@ -11,8 +11,8 @@ function managerCard (employee) {
   <p class="lead">I am from ${employee.getRole()}.</p>
   <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
   <ul class="list-group">
-    <li class="list-group-item">My GitHub username is ${employee.officeNumber}</li>
-    <li class="list-group-item">LinkedIn: ${employee.email}</li>
+    <li class="list-group-item">My manager office number is: ${employee.officeNumber}</li>
+    <li class="list-group-item">Email: ${employee.email}</li>
   </ul>
 </div>`
 }
@@ -22,8 +22,8 @@ function internCard (intern) {
   <p class="lead">I am from ${intern.getRole()}.</p>
   <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
   <ul class="list-group">
-    <li class="list-group-item">My GitHub username is ${intern.school}</li>
-    <li class="list-group-item">LinkedIn: ${intern.email}</li>
+    <li class="list-group-item">School: ${intern.school}</li>
+    <li class="list-group-item">Email: ${intern.email}</li>
   </ul>
 </div>`
 }
@@ -34,13 +34,13 @@ function engineerCard (engineer) {
   <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
   <ul class="list-group">
     <li class="list-group-item">My GitHub username is ${engineer.github}</li>
-    <li class="list-group-item">LinkedIn: ${engineer.email}</li>
+    <li class="list-group-item">Email: ${engineer.email}</li>
   </ul>
 </div>`
 }
 
 for (var i = 0; i<teamArray.length; i++) {
-  console.log(teamArray[i]);
+  //console.log(teamArray[i]);
   if(teamArray[i].getRole() === 'Manager') {
     cards.push(managerCard(teamArray[i]))
   }

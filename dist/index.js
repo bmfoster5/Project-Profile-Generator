@@ -80,13 +80,13 @@ function createIntern() {
       },
     ])
     .then((answers) => {
-      const manager = new Intern(
+      const intern = new Intern(
         answers.internName,
         answers.internId,
         answers.internEmail,
         answers.internSchool
       );
-      teamArray.push(Intern);
+      teamArray.push(intern);
       console.log(teamArray);
       displayMenu();
     })

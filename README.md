@@ -10,7 +10,7 @@ In this challenge, I want to create a Node.js command-line application that take
 
 ## Usage
 
-![alt text](assets/media/ppg.gif)
+[1] (https://drive.google.com/file/d/15y2vPewNqJrOEPVPK8ILXaVZAdfQgNaQ/view)
 
 ## How to Contribute
 
